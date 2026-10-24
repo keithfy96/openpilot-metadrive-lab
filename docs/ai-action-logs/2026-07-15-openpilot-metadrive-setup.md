@@ -133,3 +133,8 @@ uv run --python 3.12.12 ./openpilot/tools/sim/run_bridge.py
 - Added a separate Tk-based `--control-window` mode in `run_bridge.py`. It opens an `openpilot sim controls` window with buttons and key bindings for `1`, `2`, `3`, `r`, `i`, `q`, and `wasd`, sending commands directly to the simulator queue without depending on Panda3D keyboard events.
 - Updated `docs/metadrive-launch.md` to use `--render --control-window` as the preferred visual launch command.
 - Re-ran `python -m py_compile` for the edited simulator files; syntax check passed.
+- Created a separate clean model-testing lab at `openpilot-model-lab/openpilot` by copying the existing OpenPilot checkout, including `.venv`, submodules, LFS/model assets, and build artifacts.
+- Restored only the copied simulator source files in `openpilot-model-lab/openpilot` back to upstream state; the original `openpilot-metadrive-lab` demo was not reset or changed.
+- Verified `openpilot-model-lab/openpilot` is clean with `git status --short --branch` and empty `git diff --stat` when `.venv/bin` is on `PATH` for `git-lfs`.
+- Verified the copied venv uses Python 3.12.12 and the driving tinygrad model manifest is present.
+- Created `docs/model-lab-launch.md` with clean model-lab launch commands, stock simulator bridge usage, verification commands, and notes separating `openpilot-model-lab` from the customized visual MetaDrive demo lab.

@@ -11,6 +11,7 @@ cd /home/keith/Desktop/work/wingfin/AI-orchestration/openpilot-metadrive-lab/ope
 Run this and leave it running:
 
 ```bash
+cd /home/keith/Desktop/work/wingfin/AI-orchestration/openpilot-metadrive-lab/openpilot
 env PATH=/home/keith/Desktop/work/wingfin/AI-orchestration/openpilot-metadrive-lab/openpilot/.venv/bin:$PATH \
   CI=1 \
   BLOCK=soundd \
